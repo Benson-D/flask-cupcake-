@@ -133,10 +133,13 @@ class CupcakeViewsTestCase(TestCase):
             })
 
             # Testing for invalid input
-            url_2 = "/api/cupcakes/invalid"
+            url_2 = "/api/cupcakes/999999" #In 100 years this test will become outdated
             resp_2 = client.patch(url_2, json=CUPCAKE_DATA_2)
 
             self.assertEqual(resp_2.status_code, 404)
+
+            #Code review: Test what happens when we only want to change one
+            # attribute
     
     def test_delete_cupcake(self):
         """Testing for deletion of cupcake"""

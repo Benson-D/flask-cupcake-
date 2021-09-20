@@ -1,6 +1,6 @@
 """Flask app for Cupcakes"""
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_debugtoolbar import DebugToolbarExtension
 
 from models import db, connect_db, Cupcake
@@ -92,10 +92,15 @@ def delete_cupcake(cupcake_id):
     db.session.delete(cupcake)
     db.session.commit()
 
-    serialized = cupcake.serialize()
+    # serialized = cupcake.serialize()
 
-    return jsonify(deleted=serialized)
+    return jsonify(deleted=cupcake_id)
 
+@app.get("/")
+def show_homepage():
+    """Render HTML for homepage"""
+
+    return render_template("/static/base.html")
 
     
 
