@@ -15,18 +15,23 @@
         </ul>
     </div>
     <div>
+        <h2>Add a new cupcake:</h2>
         <form id="create-cupcake" method="POST">
             <label>
+                Flavor:
                 <input id="cupcake-flavor"type="text" name="flavor">
             </label>
             <label>
+                Size:
                 <input id="cupcake-size" type="text" name="size">
             </label>
 
             <label>
+                Rating
                 <input id="cupcake-rating" type="number" max="5" name="rating">
             </label>
             <label>
+                Image Url:
                 <input id="cupcake-image" type="url" name="image_url">
             </label>
             <button type="submit">Let's get baking!
@@ -34,9 +39,9 @@
         </form>
     </div>
 
-    <script src=“https://unpkg.com/jquery”></script>
-    <script src=“https://unpkg.com/axios/dist/axios.js”></script>
-    <script src=“script.js”></script>
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/script.js"></script>
 </body>
 
 </html>

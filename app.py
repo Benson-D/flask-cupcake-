@@ -100,8 +100,7 @@ def delete_cupcake(cupcake_id):
 def show_homepage():
     """Render HTML for homepage"""
 
-    return render_template("/static/base.html")
-
+    return render_template("index.html")
     
 
 
